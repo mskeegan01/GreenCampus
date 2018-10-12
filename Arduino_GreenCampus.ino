@@ -1,3 +1,4 @@
+// ******** Include dependencies ******************************************
 #include <OneWire.h>
 #include <DallasTemperature.h>
 //Pin Output for light
@@ -16,6 +17,8 @@ int upperLimit = 35;      //define the upper threshold for the temperature
 OneWire oneWirePin(tempSensor);
 DallasTemperature sensors(&oneWirePin);
 
+
+// ******** Light Sensor Action Call | Depending on the room brigthness ***********
 void setup(void) {
   pinMode(lightSensor, INPUT);
   pinMode(greenLedPin, OUTPUT);
@@ -51,17 +54,25 @@ void loop() {
   digitalWrite(greenLedPin, LOW);
   digitalWrite(yellowLedPin, LOW);
   digitalWrite(redLedPin, LOW);
+  // ******************** LIGHT SENSOR END ****************************************
+  
+  
+  //********************* Call to Action for Temperature Sensor *******************
   sensors.requestTemperatures();
   float temperature = sensors.getTempCByIndex(0);
   Serial.print("Temperature: ");
   Serial.print(temperature);
   Serial.println("°C");
   delay(2000);
-
+  //********************* TEMPERATURE SENSOR END **********************************
+  
+  
+  //********************* Call to Action Moisture Sensor **************************
   int output_value = analogRead(moistureSensor);  
   output_value = map(output_value,550,0,0,100);
   Serial.print("Mositure: ");
   Serial.print(output_value);
   Serial.println("%");
   delay(2000);
+  // ******************** MOISTURE SENSOR END *************************************
 }
