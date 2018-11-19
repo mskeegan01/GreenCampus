@@ -1,0 +1,66 @@
+body {
+    font-family: 'Courier New'; 
+}
+#topbar {
+    width: 100%;
+}
+#menu {
+    padding: 0px;
+    float: left;
+    width:33%;
+}
+button {
+    background-color: white;
+    border: none;
+}
+#plants {
+    padding: 0px;
+    float: right;
+    width: 66%;
+}
+#plants li {
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px rgb(202, 202, 202);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px 0px 0px;
+}
+#plants li:hover{
+    background-color: #DFD;
+    /*transition-duration: 1s;*/
+}
+#icon {
+    width: 48px;
+    height: 48px;
+    margin: 8px;
+}
+.plant_text {
+    text-align: center;
+}
+.plant_name {
+    font-size: 30px;
+    margin: 0px;
+}
+.plant_location {
+    margin: 0px;
+}
+.circle {
+    width: 24px;
+    height: 24px;
+    border: 4px solid #0D0;
+    border-radius: 100%;
+    transform: translate(-16px, 16px);
+    float: right;
+}
+#topbar:checked ~ #plants {
+    position: relative;
+    transition-duration: 0.5s;
+    transform: translate3d(calc(100% - 64px),0px,0px);
+}
+#topbar:not(:checked) ~ #plants {
+    position: relative;
+    transition-duration: 0.5s;
+    transform: translate3d(0px,0px,0px);
+    background-color: white;
+}
