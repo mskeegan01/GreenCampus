@@ -1,5 +1,5 @@
 # GreenCampus
-We have built a fully automated Growing-Farm for herbs and spices developed with an Arduino-Shield, IoT Devices, and Artifical-Light. 
+We have built a fully automated indoor-farm for herbs and spices developed with an Arduino-Shield, IoT Devices, and Artifical-Light. 
 
 The purpose of this project is to create a fully automated indoor-farm. One can plant herbs or spices of all kinds.
 By using artificial light (spectral colors: red, blue) one can increase the nutrition value of edible plants.
