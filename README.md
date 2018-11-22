@@ -6,8 +6,8 @@ By using artificial light (spectral colors: red, blue) one can increase the nutr
 
 For example:
 
-Vitamin C
-Provitamin A (Antioxidants)
+Vitamin C,
+Provitamin A (anti-oxidant),
 Amount of Fibre
 
 Further, we developed a farming-box which offers perfect conditions for any edible plants to grow quicker than under normal conditions. Besides, we are able to harvest already after 3 weeks instead of 5 weeks and in a higher amount.
