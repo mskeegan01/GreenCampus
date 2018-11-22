@@ -12,4 +12,4 @@ amount of Fibre
 
 Further, we developed a farming-box which offers perfect conditions for any edible plants to grow quicker than under normal conditions. Besides, we are able to harvest already after 3 weeks instead of 5 weeks and in a higher amount.
 
-The ideology behind it is to supply our Campus with healthy foods (add-ons) for our salads, teas or even as a supplement. The goal is to increase our overall health and even to decrease the chance of getting sick 
+The ideology behind the project is to supply our Campus with healthy foods (add-ons) for our salads, teas or even as a supplement. The goal is to increase our overall health and even to decrease the chance of getting sick 
