@@ -12,7 +12,7 @@ def Start():
         #for row in rows:
         #print(row)
         
-        plants = [ "Frank", "Steve", "Alice", "Bruce" ]
+        plants = [ "Frank", "Steve", "Alice", "Bruce"]
         return render_template(page_name, **locals())
         
-    app.run(port=8080)    
+    app.run(port=80)
