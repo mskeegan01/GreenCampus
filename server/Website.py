@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import socket
+import socket, NetworkManager
 
 
 def Start():
@@ -11,8 +11,8 @@ def Start():
         #rows = cursor.fetchall()
         #for row in rows:
         #print(row)
-        
-        plants = [ "Frank", "Steve", "Alice", "Bruce"]
+        plants = NetworkManager.plants
+        #plants = [ "Frank", "Steve", "Alice", "Bruce"]
         return render_template(page_name, **locals())
         
     app.run(port=80)

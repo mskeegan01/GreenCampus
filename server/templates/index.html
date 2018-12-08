@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Page Title</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Page Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
         <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='main.css') }}" />
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
         
         <!--
-            <script src="main.js"></script>
-
             <meta http-equiv="refresh" content="1.5" >
         -->
     </head>
     <body>
+        <noscript><div class="warning">Your browser doesn't support JavaScript! But that's ok, because this website does all its animations with CSS only :)</div></noscript>
+        <label id="fake_topbar" for="topbar"></label>
         <input type="checkbox" id="topbar">
+        
         <ul id="menu">
             <li>
-                <h1>PROFILE</h1>
-                <button>PROFILE</button>
+                <button id="profile_button">PROFILE</button>
             </li>
             <li>
-                <h1>DATA</h1>
+                <button>DATA</button>
             </li>
             <li>
-                <h1>SETTINGS</h1>
+                <button>SETTINGS</button>
             </li>
             <li>
-                <h1>WIKI</h1>
+                <button>WIKI</button>
             </li>
         </ul>
         <ul id="plants">
-            {% for user in plants %}
+            {% for plant in plants %}
             <li>
                 <img src="{{ url_for('static', filename='leaf.svg') }}" id="icon">
                 <div class="plant_text"><div class="plant">
                 </div>
-                    <h1 class="plant_name">{{ user }}</h1>
-                    <p class="plant_location">Desk in Spock</p>
+                    <h1 class="plant_name">{{ plant.name }}</h1>
+                    <p class="plant_location">{{ plant.location }}</p>
                 </div>
                 <div class="circle"></div>
             </li>

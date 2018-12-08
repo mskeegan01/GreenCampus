@@ -2,8 +2,48 @@ import _thread, socket, time
 import Plant
 import sqlite3
 
-plants = {}
+plants = []
 
+p = Plant.Plant()
+p.name = "Franklin"
+p.location = "Desk in Spock"
+plants.append(p)
+
+p = Plant.Plant()
+p.name = "Einstein"
+p.location = "Kitchen"
+plants.append(p)
+
+p = Plant.Plant()
+p.name = "Curie"
+p.location = "Teamroom"
+plants.append(p)
+
+p = Plant.Plant()
+p.name = "Dawkins"
+p.location = "Roomy McRoomface"
+plants.append(p)
+
+p = Plant.Plant()
+p.name = "Dawkins"
+p.location = "Roomy McRoomface"
+plants.append(p)
+
+p = Plant.Plant()
+p.name = "Hopper"
+p.location = "Quiet space"
+plants.append(p)
+
+p = Plant.Plant()
+p.name = "Edison"
+p.location = "Secret location"
+plants.append(p)
+
+for i in range(0,250):
+    p = Plant.Plant()
+    p.name = "Sample data"
+    p.location = "eternal void"
+    plants.append(p)    
 
 db = sqlite3.connect('mydb')
 cursor = db.cursor()
@@ -21,7 +61,7 @@ def _Communicate(conn):
     while True:
         data = conn.recv(4)
 
-        plant.temperature = 25.3
+        #TODO
 
         #ts = time.gmtime()
         #cursor.execute('''INSERT INTO plants(name, temperature, moisture, light, timestamp) VALUES(?, ?, ?, ?, ?)''', ( 'Pepper', data['Temperature'], data['Moisture'], data['Lightintensity'],time.strftime("%Y-%m-%d %H:%M:%S", ts))) 
