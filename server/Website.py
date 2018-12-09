@@ -15,4 +15,4 @@ def Start():
         #plants = [ "Frank", "Steve", "Alice", "Bruce"]
         return render_template(page_name, **locals())
         
-    app.run(port=80)
+    app.run(host='0.0.0.0', port=80)
