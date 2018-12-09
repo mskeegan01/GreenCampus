@@ -43,7 +43,12 @@ for i in range(0,250):
     p = Plant.Plant()
     p.name = "Sample data"
     p.location = "eternal void"
-    plants.append(p)    
+    plants.append(p)
+
+p = Plant.Plant()
+p.name = "Did you really scroll all the way down here? Were you that bored?"
+p.location = "What did you expect to find here? Some sort of easter egg?"
+plants.append(p)
 
 db = sqlite3.connect('mydb')
 cursor = db.cursor()
